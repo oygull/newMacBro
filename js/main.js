@@ -158,11 +158,20 @@ spaceGrey.addEventListener('click', ()=>{
 
 title.innerHTML = `Mac Book Air 13-inch M1/16/512 ${nameType}`
 })
+let mainImg = document.getElementById('mainImg');
 
 function showProducts(list,arr){
   arr.forEach(element => {
       let li = document.createElement('li');
       li.innerHTML = `<img src="${element}" alt="mac">`;
+      li.addEventListener('click',(e)=>{
+        mainImg.innerHTML='';
+        console.log(e.target.src);
+        let imgMain = document.createElement('div');
+        imgMain.innerHTML = `<img src="${e.target.src}" alt="">`
+        imgMain.classList='main-slider';
+        mainImg.appendChild(imgMain)
+      })
       list.appendChild(li)
   });
 }

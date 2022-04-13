@@ -32,6 +32,7 @@ body {
 .content{
   margin-top: 30px;
 }
+
 .img-box{
   display: flex;
   flex-direction: column;
